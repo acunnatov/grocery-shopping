@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Product</title>
+  <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet">
+  <style>
+    /* Reset and Global Styles */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+      color: #555;
+      line-height: 1.6;
+      padding: 5rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 4rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      width: 100%;
+      max-width: 60rem;
+    }
+
+    h1 {
+      font-family: 'Megrim', sans-serif;
+      font-size: 4.5rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 2rem;
+    }
+
+    label {
+      font-size: 1.8rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      font-size: 1.6rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      margin-right: 0.5rem;
+    }
+
+    button[type="submit"] {
+      background-color: #9be15d;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 3px;
+      font-size: 1.6rem;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #79e17b;
+    }
+
+    .checkbox {
+  display: flex; /* Use flexbox for easier alignment */
+  align-items: center; /* Align items vertically center */
+}
+
+.checkbox label {
+  margin-right: 10px; /* Adjust as needed for spacing between label and input */
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Add New Product</h1>
+
+    <form action="/submit-product" method="POST">
+      <div class="form-row">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+      </div>
+
+      <div class="form-row">
+        <label for="image">Image Emoji:</label>
+        <input type="text" id="image" name="image" required>
+      </div>
+
+      <div class="form-row">
+        <label for="from">From:</label>
+        <input type="text" id="from" name="from" required>
+      </div>
+
+      <div class="form-row">
+        <label for="nutrients">Nutrients:</label>
+        <input type="text" id="nutrients" name="nutrients" required>
+      </div>
+
+      <div class="form-row">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+      </div>
+
+      <div class="form-row">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+
+      <div class="form-row">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+
+      <div class="form-row checkbox">
+        <label for="organic">Organic:</label>
+        <p>&nbsp;</p>
+        <input type="checkbox" id="organic" name="organic">
+      </div>
+      
+
+      <div class="form-row">
+        <button type="submit">Add Product</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
