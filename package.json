@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Jonas Schmedtmann",
+  "author": "Abdulbosit Sunnatov",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
